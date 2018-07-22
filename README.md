@@ -1,18 +1,43 @@
+
+## 校对🀄️
+
+- ⏰ 2018 7.22 开始
+
+**0/1**
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [TypeScript Vue Starter](#typescript-vue-starter)
+- [初始化您的项目](#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%82%A8%E7%9A%84%E9%A1%B9%E7%9B%AE)
+- [初始化项目](#%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE)
+- [安装我们的依赖项](#%E5%AE%89%E8%A3%85%E6%88%91%E4%BB%AC%E7%9A%84%E4%BE%9D%E8%B5%96%E9%A1%B9)
+- [添加TypeScript配置文件](#%E6%B7%BB%E5%8A%A0typescript%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6)
+- [添加Webpack](#%E6%B7%BB%E5%8A%A0webpack)
+- [添加构建脚本](#%E6%B7%BB%E5%8A%A0%E6%9E%84%E5%BB%BA%E8%84%9A%E6%9C%AC)
+- [创建一个基本项目](#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%9F%BA%E6%9C%AC%E9%A1%B9%E7%9B%AE)
+- [添加组件](#%E6%B7%BB%E5%8A%A0%E7%BB%84%E4%BB%B6)
+- [单个文件组件](#%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6)
+- [使用装饰器定义组件](#%E4%BD%BF%E7%94%A8%E8%A3%85%E9%A5%B0%E5%99%A8%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6)
+- [接下来是什么?](#%E6%8E%A5%E4%B8%8B%E6%9D%A5%E6%98%AF%E4%BB%80%E4%B9%88)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # TypeScript Vue Starter
 
-This quick start guide will teach you how to get TypeScript and [Vue](https://vuejs.org) working together.
-This guide is flexible enough that any steps here can be used to integrate TypeScript into an existing Vue project.
+本快速入门指南将教您如何获取TypeScript和[Vue](https://vuejs.org)一起工作. 本指南非常灵活,可以使用此处的任何步骤将TypeScript集成到现有的Vue项目中. 
 
-# Initialize your project
+# 初始化您的项目
 
-Let's create a new package.
+让我们创建一个新包. 
 
 ```sh
 mkdir typescript-vue-tutorial
 cd typescript-vue-tutorial
 ```
 
-Next, we'll scaffold our project in the following way:
+接下来,我们将通过以下方式构建项目: 
 
 ```txt
 typescript-vue-tutorial/
@@ -21,10 +46,9 @@ typescript-vue-tutorial/
    └─ components/
 ```
 
-TypeScript files will start out in your `src` folder, run through the TypeScript compiler, then webpack, and end up in a `bundle.js` file in `dist`.
-Any components that we write will go in the `src/components` folder.
+TypeScript文件将从您的开始`src`文件夹,运行TypeScript编译器,然后运行webpack,最后进入`bundle.js`档案`dist`. 我们写的任何组件都会进入`src/components`夹. 
 
-Let's scaffold this out:
+让我们来支持这个: 
 
 ```shell
 mkdir src
@@ -33,40 +57,35 @@ mkdir components
 cd ..
 ```
 
-Webpack will eventually generate the `dist` directory for us.
+Webpack最终将生成`dist`我们的目录. 
 
-# Initialize the project
+# 初始化项目
 
-Now we'll turn this folder into an npm package.
+现在我们将把这个文件夹变成一个npm包. 
 
 ```shell
 npm init
 ```
 
-You'll be given a series of prompts.
-You can use the defaults except for your entry point.
-You can always go back and change these in the `package.json` file that's been generated for you.
+您将获得一系列提示. 除入口点外,您可以使用默认值. 您可以随时返回并更改这些内容`package.json`已为您生成的文件. 
 
-# Install our dependencies
+# 安装我们的依赖项
 
-Ensure TypeScript, Webpack, Vue and the necessary loaders are installed.
+确保安装TypeScript,Webpack,Vue和必要的加载器. 
 
 ```sh
 npm install --save-dev typescript webpack ts-loader css-loader vue vue-loader vue-template-compiler
 ```
 
-Webpack is a tool that will bundle your code and optionally all of its dependencies into a single `.js` file.
-While you don't need to use a bundler like Webpack or Browserify, these tools will allow us to use `.vue` files which we'll cover in a bit.
+Webpack是一个将代码和可选的所有依赖项捆绑在一起的工具`.js`文件. 虽然您不需要使用像Webpack或Browserify这样的捆绑器,但这些工具将允许我们使用`.vue`我们稍后会介绍的文件. 
 
-We didn't need to [add `.d.ts` files](https://www.typescriptlang.org/docs/handbook/declaration-files/consumption.html), but if we were using a package which didn't ship declaration files, we'd need to install the appropriate `@types/` package.
-[Read more about using definition files in our documentation](https://www.typescriptlang.org/docs/handbook/declaration-files/consumption.html).
+我们不需要[add `.d.ts` files](https://www.typescriptlang.org/docs/handbook/declaration-files/consumption.html),但如果我们使用的是未发送声明文件的软件包,我们需要安装相应的软件包`@types/`包. [Read more about using definition files in our documentation](https://www.typescriptlang.org/docs/handbook/declaration-files/consumption.html). 
 
-# Add a TypeScript configuration file
+# 添加TypeScript配置文件
 
-You'll want to bring your TypeScript files together - both the code you'll be writing as well as any necessary declaration files.
+您需要将TypeScript文件放在一起 - 您要编写的代码以及任何必要的声明文件. 
 
-To do this, you'll need to create a `tsconfig.json` which contains a list of your input files as well as all your compilation settings.
-Simply create a new file in your project root named `tsconfig.json` and fill it with the following contents:
+要做到这一点,你需要创建一个`tsconfig.json`其中包含输入文件列表以及所有编译设置. 只需在项目根目录中创建一个名为的新文件`tsconfig.json`并填写以下内容: 
 
 ```json
 {
@@ -85,13 +104,11 @@ Simply create a new file in your project root named `tsconfig.json` and fill it 
 }
 ```
 
-Notice the `strict` flag is set to true.
-At the very least, TypeScript's `noImplicitThis` flag will need to be turned on to leverage Vue's declaration files, but `strict` gives us that and more (like `noImplicitAny` and `strictNullChecks`).
-We strongly recommend using TypeScript's stricter options for a better experience.
+请注意`strict`flag设置为true. 至少,TypeScript的`noImplicitThis`需要打开flag来利用Vue的声明文件,但是`strict`给了我们更多 (比如`noImplicitAny`和`strictNullChecks`) . 我们强烈建议您使用TypeScript更严格的选项以获得更好的体验. 
 
-# Adding Webpack
+# 添加Webpack
 
-We'll need to add a `webpack.config.js` to bundle our app.
+我们需要添加一个`webpack.config.js`捆绑我们的应用程序. 
 
 ```js
 var path = require('path')
@@ -175,10 +192,9 @@ if (process.env.NODE_ENV === 'production') {
 }
 ```
 
-# Add a build script
+# 添加构建脚本
 
-Open up your `package.json` and add a script named `build` to run Webpack.
-Your `"scripts"` field should look something like this:
+打开你的`package.json`并添加一个名为的脚本`build`运行Webpack. 你的`"scripts"`字段应该看起来像这样: 
 
 ```json
 "scripts": {
@@ -187,22 +203,21 @@ Your `"scripts"` field should look something like this:
   },
 ```
 
-Once we add an entry point, we'll be able to build by running
+一旦我们添加了一个入口点,我们就可以通过运行来构建
 
 ```sh
 npm run build
 ```
 
-and have builds get triggered on changes by running
+并通过运行来触发更改
 
 ```sh
 npm run build -- --watch
 ```
 
-# Create a basic project
+# 创建一个基本项目
 
-Let's create the most bare-bones Vue & TypeScript example that we can try out.
-First, create the file `./src/index.ts`:
+让我们创建一个我们可以尝试的最简单的Vue和TypeScript示例. 首先,创建文件`./src/index.ts`: 
 
 ```ts
 // src/index.ts
@@ -220,11 +235,9 @@ let v = new Vue({
         name: "World"
     }
 });
-
 ```
 
-Let's check to see if everything is wired up correctly.
-Create an `index.html` with the following content at your root:
+我们来检查一切是否正确连线. 创建一个`index.html`在您的根目录中包含以下内容: 
 
 ```html
 <!doctype html>
@@ -239,25 +252,19 @@ Create an `index.html` with the following content at your root:
 </html>
 ```
 
-Now run `npm run build` and open up your `index.html` file in a browser.
+现在跑`npm run build`并打开你的`index.html`在浏览器中输入文件. 
 
-You should see some text that says `Hello World!`.
-Below that, you'll see a textbox.
-If you change the content of the textbox, you'll notice how the text is synchronized between the two.
+你应该看到一些文字说`Hello World!`. 在此之下,您将看到一个文本框. 如果更改文本框的内容,您将注意到文本在两者之间的同步方式. 
 
-Congrats!
-You've gotten TypeScript and Vue fully hooked up!
+恭喜!你已经完全搞定了TypeScript和Vue!
 
-# Adding a component
+# 添加组件
 
-As you've just seen, Vue has a very simple interface for when you need to accomplish simple tasks.
-When our page only needed to communicate a bit of data between two elements, it took very little code.
+正如您刚才所见,Vue有一个非常简单的界面,可用于完成简单任务. 当我们的页面只需要在两个元素之间传递一些数据时,它只花了很少的代码. 
 
-For more complex tasks, Vue is flexible in that it supports breaking your application into *components*.
-[Components](https://vuejs.org/v2/guide/components.html) are useful for separating the concerns of how entities are displayed to the user.
-[Read up more on components from Vue's documentation.](https://vuejs.org/v2/guide/components.html)
+对于更复杂的任务,Vue非常灵活,因为它支持破坏您的应用程序*组件*. [Components](https://vuejs.org/v2/guide/components.html)对于将实体如何显示给用户的问题分开是有用的. [Read up more on components from Vue's documentation.](https://vuejs.org/v2/guide/components.html)
 
-A Vue component can be declared in the following manner:
+可以通过以下方式声明Vue组件: 
 
 ```ts
 // src/components/Hello.ts
@@ -294,12 +301,9 @@ export default Vue.extend({
 });
 ```
 
-This component has two buttons and some text.
-When rendered, it takes an initial `name` and an `initialEnthusiasm` which is the number of exclamation marks we want to display.
-When we hit the `+` button, it adds an exclamation mark to the end of the text.
-Likewise, when we hit the `-` button, it removes an exclamation mark unless we're down to just one.
+该组件有两个按钮和一些文本. 渲染时,它需要一个初始值`name`和`initialEnthusiasm`这是我们想要显示的感叹号的数量. 当我们击中`+`按钮,它在文本的末尾添加一个感叹号. 同样,当我们击中时`-`按钮,它会删除一个感叹号,除非我们只是一个感叹号. 
 
-Our root Vue instance can consume it as follows:
+我们的根Vue实例可以按如下方式使用它: 
 
 ```ts
 // src/index.ts
@@ -322,20 +326,15 @@ let v = new Vue({
 });
 ```
 
-However, we'll note that it is fairly popular to use [Vue's *single file components*](https://vuejs.org/v2/guide/single-file-components.html).
-Let's try writing the above as an SFC.
+但是,我们会注意到它的使用相当普遍[Vue's *single file components*](https://vuejs.org/v2/guide/single-file-components.html). 让我们尝试将上述内容写成SFC. 
 
-# Single File Components
+# 单个文件组件
 
-When using Webpack or Browserify, Vue has plugins like [vue-loader](https://github.com/vuejs/vue-loader) and [vueify](https://www.npmjs.com/package/vueify) which allow you to author your components in HTML-like files.
-These files, which end in a `.vue` extension, are single file components.
+使用Webpack或Browserify时,Vue有插件[vue-loader](https://github.com/vuejs/vue-loader)和[vueify](https://www.npmjs.com/package/vueify)它允许您在类似HTML的文件中创作组件. 这些文件以a结尾`.vue`扩展,是单个文件组件. 
 
-There are a few things that need to be put in place to use `.vue` files with TypeScript, but luckily we're already halfway there.
-We already installed vue-loader earlier when we got our dev dependencies.
-We also specified the `appendTsSuffixTo: [/\.vue$/],` option to ts-loader in our `webpack.config.js` file, which allows TypeScript to process the code extracted from a single file component.
+有一些事情需要付诸实施才能使用`.vue`使用TypeScript的文件,但幸运的是我们已经在那里了一半. 我们在获得dev依赖项时已经安装了vue-loader. 我们还指定了`appendTsSuffixTo: [/\.vue$/],`我们的ts-loader选项`webpack.config.js`file,它允许TypeScript处理从单个文件组件中提取的代码. 
 
-One extra thing we'll have to do is tell TypeScript what `.vue` files will look like when they're imported.
-We'll do this with a `vue-shims.d.ts` file:
+我们要做的另一件事是告诉TypeScript什么`.vue`文件将在导入时显示. 我们这样做是为了`vue-shims.d.ts`文件: 
 
 ```ts
 // src/vue-shims.d.ts
@@ -346,15 +345,11 @@ declare module "*.vue" {
 }
 ```
 
-We don't need to import this file anywhere.
-It's automatically included by TypeScript, and it tells it that anything imported that ends in `.vue` has the same shape of the Vue constructor itself.
+我们不需要在任何地方导入此文件. 它由TypeScript自动包含,并告诉它任何导入的内容都以`.vue`具有与Vue构造函数本身相同的形状. 
 
-What's left?
-The editing experience!
-One of the best features TypeScript gives us is its editor support.
-To leverage that within `.vue` files, we recommend using [Visual Studio Code](https://code.visualstudio.com/) with the [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) plugin for Vue.
+还剩下什么?编辑体验!TypeScript为我们提供的最佳功能之一是它的编辑器支持. 在内部利用它`.vue`文件,我们建议使用[Visual Studio Code](https://code.visualstudio.com/)随着[Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)Vue的插件. 
 
-Now, let's write an SFC!
+现在,让我们写一个SFC!
 
 ```html
 <!-- src/components/Hello.vue -->
@@ -400,7 +395,7 @@ export default Vue.extend({
 </style>
 ```
 
-and let's import it for our root instance:
+然后让我们为我们的根实例导入它: 
 
 ```ts
 // src/index.ts
@@ -423,20 +418,18 @@ let v = new Vue({
 });
 ```
 
-Notice a few things about our single-file component:
+请注意我们的单文件组件的一些事项: 
 
-* We had to write `<script lang="ts">` to get it working with TypeScript.
-* We had to import the component with the `.vue` extension in `index.ts`.
-* We were able to write CSS isolated to our components in a `<style>` tag, which we couldn't do in our `.ts` components.
-* We default-exported a call to `Vue.extend` (rather than the options bag itself).
-  If you don't write `Vue.extend`, Vetur will make it look like things are working correctly, but you'll get an error when you build your project.
+-   我们不得不写`<script lang="ts">`让它使用TypeScript. 
+-   我们不得不用. 导入组件`.vue`扩展`index.ts`. 
+-   我们能够将CSS隔离到我们的组件中`<style>`标签,我们无法做到的`.ts`组件. 
+-   我们默认导出了一个调用`Vue.extend` (而不是选项包本身) . 如果你不写`Vue.extend`,Vetur会让它看起来像是正常工作,但是在构建项目时会出现错误. 
 
-Try running `npm run build` and open up `index.html` to see the result!
+试试跑步`npm run build`并打开`index.html`看到结果!
 
-# Using decorators to define a component
+# 使用装饰器定义组件
 
-Components can also be defined using [decorators](https://www.typescriptlang.org/docs/handbook/decorators.html).
-With the help of two additional packages, ([vue-class-component](https://github.com/vuejs/vue-class-component) and [vue-property-decorator](https://github.com/kaorun343/vue-property-decorator)), our components can be rewritten in the following manner:
+组件也可以使用定义[decorators](https://www.typescriptlang.org/docs/handbook/decorators.html). 在另外两个包的帮助下, ([vue-class-component](https://github.com/vuejs/vue-class-component)和[vue-property-decorator](https://github.com/kaorun343/vue-property-decorator)) ,我们的组件可以通过以下方式重写: 
 
 ```ts
 import { Vue, Component, Prop } from "vue-property-decorator";
@@ -463,24 +456,20 @@ export default class HelloDecorator extends Vue {
 }
 ```
 
-Instead of using `Vue.extend` to define our component, we create a class extending `Vue` and decorate it using the `@Component` decorator from the `vue-class-component` package (which was re-exported from the `vue-property-decorator` package).
+而不是使用`Vue.extend`为了定义我们的组件,我们创建了一个扩展类`Vue`并用它装饰它`@Component`来自的装饰`vue-class-component`包 (从中重新导出) `vue-property-decorator`包) . 
 
-Properties are defined by prefixing instance variables with the `@Prop()` decorator from the `vue-property-decorator` package.
-Because the `--strictPropertyInitialization` option is on, we need to tell TypeScript that Vue will initialize our properties by appending a `!` to them.
-This tells TypeScript "hey, relax, someone else is going to assign this property a value."
+通过使用实例变量加前缀来定义属性`@Prop()`来自的装饰`vue-property-decorator`包. 因为`--strictPropertyInitialization`选项打开,我们需要告诉TypeScript Vue将通过附加a来初始化我们的属性`!`给他们. 这告诉TypeScript"嘿,放松,别人会给这个属性分配一个值. "
 
-Regular instance variables, such as `enthusiasm` in our example, are automatically made available for data binding to the template, just as if they had been defined in the `data` field.
-Note that all variables must be set to a value other than `undefined` for the binding to work.
+常规实例变量,例如`enthusiasm`在我们的示例中,自动可用于绑定到模板的数据,就像它们已经在模板中定义一样`data`领域. 请注意,所有变量必须设置为除以外的值`undefined`使绑定工作. 
 
-Similarly, methods such as `increment` are treated as if they had been written in the `methods` field, and are automatically made available for the template.
+同样,方法如`increment`被视为好像是写在`methods`字段,并自动为模板提供. 
 
-Finally, computed properties like `exclamationMarks` are simply written as `get` accessors.
+最后,计算属性如`exclamationMarks`简单地写成`get`存取. 
 
-# What next?
+# 接下来是什么?
 
-You can [try out this application by cloning it from GitHub](https://github.com/DanielRosenwasser/typescript-vue-tutorial).
+您可以[try out this application by cloning it from GitHub](https://github.com/DanielRosenwasser/typescript-vue-tutorial). 
 
-Once you feel like you've got a handle on that, you can try out a sample [TodoMVC-style app written in TypeScript and Vue](https://github.com/DanielRosenwasser/typescript-vue-todomvc).
-This TodoMVC-style sample features routing through [vue-router](https://github.com/vuejs/vue-router) so that your application can show different views depending on the current URL.
+一旦你觉得你已经掌握了它,你可以试试样品[TodoMVC-style app written in TypeScript and Vue](https://github.com/DanielRosenwasser/typescript-vue-todomvc). 这个TodoMVC风格的样本具有路由功能[vue-router](https://github.com/vuejs/vue-router)以便您的应用程序可以根据当前URL显示不同的视图. 
 
-You may also want to look into [Vuex](https://github.com/vuejs/vuex) if you're looking for [Redux](http://redux.js.org/)-style state management.
+您可能还想了解一下[Vuex](https://github.com/vuejs/vuex)如果你正在寻找[Redux](http://redux.js.org/)式的国家管理. 
