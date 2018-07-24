@@ -1,4 +1,15 @@
-### 校对✅
+### 校对✅ [![translate-svg]][translate-list]
+
+[translate-svg]: http://llever.com/translate.svg
+[translate-list]: https://github.com/chinanf-boy/chinese-translate-list
+
+
+欢迎 `Issue` 和 `Pull` ❤️, 最好 `Pull` 👏 
+
+## 生活
+
+[help me live , live need money 💰](https://github.com/chinanf-boy/live-need-money)
+
 
 <details>
 
