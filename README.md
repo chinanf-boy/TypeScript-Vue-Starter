@@ -1,26 +1,31 @@
-### 校对✅ [![translate-svg]][translate-list]
+
+## TypeScript Vue 入门 [![translate-svg]][translate-list]
 
 [translate-svg]: http://llever.com/translate.svg
 [translate-list]: https://github.com/chinanf-boy/chinese-translate-list
 
+## 校对 ✅
 
-欢迎 `Issue` 和 `Pull` ❤️, 最好 `Pull` 👏 
+<!-- doc-templite START generated -->
+<!-- repo = 'Microsoft/TypeScript-Vue-Starter' -->
+<!-- commit = 'c243b11a6f827e780a5163999bc472c95ff5a0e0' -->
+<!-- time = '2018-5-24' -->
+翻译的原文 | 与日期 | 最新更新 | 更多
+---|---|---|---
+[commit] | ⏰ 2018-5-24 | ![last] | [中文翻译][translate-list]
+
+[last]: https://img.shields.io/github/last-commit/Microsoft/TypeScript-Vue-Starter.svg
+[commit]: https://github.com/Microsoft/TypeScript-Vue-Starter/tree/c243b11a6f827e780a5163999bc472c95ff5a0e0
+
+<!-- doc-templite END generated -->
+
+### 贡献
+
+欢迎 👏 勘误/校对/更新贡献 😊 [具体贡献请看](https://github.com/chinanf-boy/chinese-translate-list#贡献)
 
 ## 生活
 
 [help me live , live need money 💰](https://github.com/chinanf-boy/live-need-money)
-
-
-<details>
-
-<summary> ⏰ 2018 7.22 开始 </summary>
-
-
-**1/1**
-
-- ⏰ 2018 7.23 结束 ^_^
-
-</details>
 
 ---
 
